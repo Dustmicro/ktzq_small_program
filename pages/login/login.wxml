@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="background" src="../../images/login.png" mode="aspectFill"></image>
+  <view class="login-box">
+    <view class="title">开拓足球</view>
+    <view class="input-group">
+      <input placeholder="请输入用户名" value="{{username}}" bindinput="onUsernameInput" />
+    </view>
+    <view class="input-group">
+      <input placeholder="请输入密码" type="password" value="{{password}}" bindinput="onPasswordInput" />
+    </view>
+    <button class="login-btn" bindtap="onLogin">登录</button>
+  </view>
+</view>
