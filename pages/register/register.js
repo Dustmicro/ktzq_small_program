@@ -27,14 +27,16 @@ Page({
       return;
     }
 
-    // 这里可以添加注册请求的逻辑
+    // 保存用户名和密码到本地存储
+    wx.setStorageSync('username', username);
+    wx.setStorageSync('password', password);
 
     wx.showToast({
       title: '注册成功',
       icon: 'success'
     });
 
-    // 注册成功后的操作，如跳转到登录页面
+    // 注册成功后跳转到登录页面
     wx.redirectTo({
       url: '/pages/login/login'
     });
