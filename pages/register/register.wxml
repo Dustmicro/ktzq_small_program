@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="register-box">
+    <view class="title">注册</view>
+    <view class="input-group">
+      <input placeholder="请输入用户名" bindinput="onUsernameInput" />
+    </view>
+    <view class="input-group">
+      <input placeholder="请输入密码" type="password" bindinput="onPasswordInput" />
+    </view>
+    <button class="register-btn" bindtap="onRegister">注册</button>
+  </view>
+</view>

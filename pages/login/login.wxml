@@ -7,7 +7,10 @@
     </view>
     <view class="input-group">
       <input placeholder="请输入密码" type="password" value="{{password}}" bindinput="onPasswordInput" />
+      <text class="register-text" bindtap="onRegister">注册</text>
     </view>
-    <button class="login-btn" bindtap="onLogin">登录</button>
+    <view class="button-group">
+      <button class="login-btn" bindtap="onLogin">登录</button>
+    </view>
   </view>
 </view>

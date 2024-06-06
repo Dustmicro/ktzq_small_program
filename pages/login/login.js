@@ -2,8 +2,8 @@ Page({
   data: {
     username: '',
     password: '',
-    relusername: 'HuangYiFeng',
-    relpassword: '233235'
+    presetUsername: 'admin', // 预设的用户名
+    presetPassword: '123456' // 预设的密码
   },
 
   onUsernameInput(e) {
@@ -19,7 +19,7 @@ Page({
   },
 
   onLogin() {
-    const { username, password, relusername, relpassword} = this.data;
+    const { username, password, presetUsername, presetPassword } = this.data;
 
     if (!username || !password) {
       wx.showToast({
@@ -29,8 +29,8 @@ Page({
       return;
     }
 
-    if (username === relusername && password === relpassword) {
-      // 在这里可以进行登录请求的发送
+    if (username === presetUsername && password === presetPassword) {
+      // 登录成功
       wx.showToast({
         title: '登录成功',
         icon: 'success'
@@ -41,7 +41,7 @@ Page({
         url: '/pages/index/index'
       });
     } else {
-
+      // 登录失败，清空输入的用户名和密码
       this.setData({
         username: '',
         password: ''
@@ -52,5 +52,13 @@ Page({
         icon: 'none'
       });
     }
+  },
+
+  onRegister() {
+    console.log('Register button clicked');
+    // 跳转到注册页面
+    wx.navigateTo({
+      url: '/pages/register/register'
+    });
   }
 });
