@@ -1,12 +1,25 @@
 <view class="container">
+  <image class="background" src="../../images/login.png" mode="aspectFill"></image>
   <view class="register-box">
     <view class="title">注册</view>
+
+    <!-- 用户名输入框 -->
     <view class="input-group">
       <input placeholder="请输入用户名" bindinput="onUsernameInput" />
     </view>
+
+    <!-- 密码输入框 -->
     <view class="input-group">
       <input placeholder="请输入密码" type="password" bindinput="onPasswordInput" />
     </view>
+
+    <!-- 再次输入密码输入框 -->
+    <view class="input-group">
+      <input placeholder="再次输入密码" type="password" bindinput="onConfirmPasswordInput" />
+    </view>
+
+    <!-- 注册按钮 -->
     <button class="register-btn" bindtap="onRegister">注册</button>
   </view>
 </view>
+ 

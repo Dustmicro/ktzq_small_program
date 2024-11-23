@@ -7,10 +7,19 @@
     </view>
     <view class="input-group">
       <input placeholder="请输入密码" type="password" value="{{password}}" bindinput="onPasswordInput" />
+      <!-- <text class="register-text" bindtap="onRegister">注册</text> -->
+    </view>
+    <view class="button-container">
       <text class="register-text" bindtap="onRegister">注册</text>
+      <!-- 忘记密码按钮 -->
+      <text class="forget-password-text" bindtap="onForgetPassword">忘记密码?</text>
     </view>
     <view class="button-group">
       <button class="login-btn" bindtap="onLogin">登录</button>
+      <view class="author-info">
+        <text>作者：长安不野 </text>
+        <text>© 661020241123 版权所有</text>
+  </view>
     </view>
   </view>
 </view>
